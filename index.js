@@ -4,7 +4,7 @@ const rgbaToHex = require('./lib/polyfill/rgbatohex');
 
 const reIeFilter = /^alpha\(|^progid:/i;
 
-module.exports = postcss.plugin('iecss3', (options) => {
+module.exports = postcss.plugin('postcss-ie-polyfills', (options) => {
 	options = options || {};
 	return (css, result) => {
 		opacity(css, result);
